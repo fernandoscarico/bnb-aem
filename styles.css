@@ -1,0 +1,23 @@
+body {
+  background-color: white;
+  color: #111;
+}
+header, .btn-dark {
+  background-color: black;
+  color: white;
+}
+nav.navbar {
+  background-color: black;
+}
+.btn-dark:hover {
+  background-color: #900;
+}
+footer {
+  background-color: black;
+  color: white;
+  font-size: 0.9rem;
+}
+.text-muted.small {
+  font-size: 0.85rem;
+  color: #555;
+}
