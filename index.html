@@ -4,74 +4,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="B&B AeM - Soggiorna a Madone (BG), in un ambiente confortevole e moderno.">
+  <meta name="description" content="B&B AeM - Il tuo soggiorno a Madone (BG)">
   <title>B&B AeM</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <style>
-    :root {
-      --main-red: #b30000;
-      --main-black: #000000;
-      --main-white: #ffffff;
-    }
-
     body {
-      background-color: var(--main-white);
-      color: var(--main-black);
+      background-color: #ffffff;
+      color: #000000;
     }
-
-    nav.navbar {
-      background-color: var(--main-white);
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    .navbar {
+      background-color: #ffffff;
     }
-
     .navbar-brand img {
       height: 50px;
     }
-
-    .btn-main {
-      background-color: var(--main-red);
-      color: white;
-    }
-
-    .btn-main:hover {
-      background-color: #900000;
-      color: white;
-    }
-
-    .carousel-item img {
-      width: 100%;
+    .carousel-inner img {
       height: 500px;
       object-fit: cover;
+      width: 100%;
     }
-
-    footer {
-      background-color: var(--main-black);
+    .btn-main {
+      background-color: #b30000;
       color: white;
+    }
+    .btn-main:hover {
+      background-color: #8f0000;
+    }
+    footer {
+      background-color: #000000;
+      color: #ffffff;
       padding: 20px 0;
+      text-align: center;
     }
   </style>
 </head>
 
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg shadow-sm">
     <div class="container">
-      <a class="navbar-brand" href="#"><img src="logo.png" alt="B&B AeM"></a>
+      <a class="navbar-brand" href="#">
+        <img src="logo.png" alt="B&B AeM Logo">
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#camera">Camera</a></li>
-          <li class="nav-item"><a class="nav-link" href="#prenotazioni">Prenota</a></li>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#camere">Camere</a></li>
           <li class="nav-item"><a class="nav-link" href="#contatti">Contatti</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">ITA/ENG</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Hero / Carosello -->
+  <!-- Carosello -->
   <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -91,18 +79,19 @@
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Precedente</span>
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Successiva</span>
     </button>
   </div>
 
   <!-- Footer -->
-  <footer class="text-center">
-    <div class="container">
-      <p class="mb-0">&copy; 2025 B&B AeM - Tutti i diritti riservati</p>
-    </div>
+  <footer>
+    <p class="mb-1">&copy; 2025 B&B AeM - Tutti i diritti riservati</p>
+    <p class="mb-0 small">Via Risorgimento 15, Madone (BG)</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
