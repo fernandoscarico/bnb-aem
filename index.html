@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>B&B AeM – Madone (BG)</title>
 
-  <meta name="description" content="B&B AeM a Madone, vicino a Bergamo, Leolandia e il Santuario Papa Giovanni XXIII. Camera moderna con colazione inclusa.">
-  <meta name="keywords" content="B&B Madone, Bed and Breakfast Bergamo, B&B Leolandia, B&B Papa Giovanni XXIII">
+  <meta name="description" content="B&B AeM a Madone, vicino a Bergamo e Leolandia. Camera moderna, colazione inclusa, comfort e relax.">
+  <meta name="keywords" content="B&B Madone, Bed and Breakfast Bergamo, B&B Leolandia, B&B AeM">
   <meta name="author" content="B&B AeM">
 
   <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -14,94 +14,128 @@
 
   <style>
     :root {
-      --navbar-color: #000000;
-      --main-color: #B40000;
-      --background-color: #FFFFFF;
+      --navbar-bg: #FFFFFF;
+      --navbar-text: #1A1A1A;
+      --accent-color: #B40000;
+      --background-color: #FAFAFA;
+      --card-bg: #FFFFFF;
+      --text-color: #1A1A1A;
     }
 
     body {
       background-color: var(--background-color);
+      color: var(--text-color);
+      font-family: "Helvetica Neue", Arial, sans-serif;
     }
 
+    /* NAVBAR */
+    .navbar {
+      background-color: var(--navbar-bg) !important;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    .navbar-brand span {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--navbar-text);
+    }
+    .navbar-nav .nav-link {
+      color: var(--navbar-text) !important;
+      font-weight: 500;
+      padding-left: 14px;
+      padding-right: 14px;
+    }
+    .navbar-nav .nav-link:hover {
+      color: var(--accent-color) !important;
+    }
+
+    /* BUTTONS */
     .btn-main {
-      background: var(--main-color);
+      background: var(--accent-color);
       color: white;
       border: none;
+      padding: 10px 22px;
+      font-size: 1rem;
+      border-radius: 6px;
       transition: 0.3s;
     }
-
     .btn-main:hover {
-      background: #7d0000;
+      background: #7D0000;
       color: white;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
 
+    /* CAROUSEL */
     .carousel-inner img {
-      height: 600px;
+      height: 550px;
       object-fit: cover;
-      transition: 0.3s;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      border-radius: 8px;
     }
 
-    .carousel-inner img:hover {
-      transform: scale(1.02);
-    }
-
-    footer {
-      background: var(--main-color);
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-    }
-
+    /* SECTIONS */
     section {
-      padding: 60px 0;
+      padding: 70px 0;
+    }
+
+    h2 {
+      font-weight: 600;
+      margin-bottom: 35px;
+      color: #1A1A1A;
+    }
+
+    /* CARDS */
+    .card {
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     }
 
     .card-img-top {
-      height: 200px;
+      height: 180px;
       object-fit: cover;
+      border-radius: 12px 12px 0 0;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #FFFFFF;
+      color: #1A1A1A;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+      border-top: 1px solid #E4E4E4;
     }
   </style>
 </head>
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg" style="background-color: var(--navbar-color);">
+<nav class="navbar navbar-expand-lg">
   <div class="container">
 
-    <a class="navbar-brand d-flex align-items-center text-white" href="#">
+    <a class="navbar-brand d-flex align-items-center" href="#">
       <img src="logo.png" alt="B&B AeM Logo" style="height: 45px; width:auto; margin-right:10px;">
       <span>B&B AeM</span>
     </a>
 
-    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav align-items-center">
-        <li class="nav-item"><a class="nav-link text-white" href="#camera">La Camera</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="#prenotazioni">Prenotazioni</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="#contatti">Contatti</a></li>
 
-        <li class="nav-item">
-          <a class="nav-link text-white" href="index.html">
-            <img src="https://flagcdn.com/w20/it.png" width="20" alt="IT">
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link text-white" href="en.html">
-            <img src="https://flagcdn.com/w20/gb.png" width="20" alt="EN">
-          </a>
-        </li>
+        <li class="nav-item"><a class="nav-link" href="#camera">Camera</a></li>
+        <li class="nav-item"><a class="nav-link" href="#prenotazioni">Prenotazioni</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contatti">Contatti</a></li>
 
         <li class="nav-item ms-2">
-          <a class="nav-link text-white" href="#" target="_blank">
-            <img src="instagram.png" width="24" alt="Instagram">
-          </a>
+          <a class="nav-link" href="index.html"><img src="https://flagcdn.com/w20/it.png" width="20" alt="IT"></a>
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="en.html"><img src="https://flagcdn.com/w20/gb.png" width="20" alt="EN"></a>
+        </li>
+
       </ul>
     </div>
 
@@ -111,21 +145,21 @@
 <!-- CAMERA -->
 <section id="camera">
   <div class="container">
-    <h2 class="text-center mb-4">La Camera</h2>
+    <h2 class="text-center">La Camera</h2>
 
     <div id="carouselCamera" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
 
         <div class="carousel-item active">
-          <img src="camera_1.jpeg" class="d-block w-100 rounded" alt="Camera 1">
+          <img src="camera_1.jpeg" class="d-block w-100" alt="Camera 1">
         </div>
 
         <div class="carousel-item">
-          <img src="camera_2.jpeg" class="d-block w-100 rounded" alt="Camera 2">
+          <img src="camera_2.jpeg" class="d-block w-100" alt="Camera 2">
         </div>
 
         <div class="carousel-item">
-          <img src="camera_3.jpeg" class="d-block w-100 rounded" alt="Camera 3">
+          <img src="camera_3.jpeg" class="d-block w-100" alt="Camera 3">
         </div>
 
       </div>
@@ -137,14 +171,13 @@
       <button class="carousel-control-next" type="button" data-bs-target="#carouselCamera" data-bs-slide="next">
         <span class="carousel-control-next-icon"></span>
       </button>
-
     </div>
 
     <div class="text-center mt-4">
       <p class="lead">Camera matrimoniale moderna con bagno privato, Wi-Fi, aria condizionata e colazione inclusa.</p>
-      <p class="lead">Ideale per coppie o famiglie in visita nella zona.</p>
+      <p class="lead">Perfetta per coppie e famiglie in visita nella zona.</p>
       <p><strong>Da €70 a notte</strong></p>
-      <a href="#prenotazioni" class="btn btn-main">Prenota o richiedi disponibilità</a>
+      <a href="#prenotazioni" class="btn btn-main">Richiedi disponibilità</a>
     </div>
   </div>
 </section>
@@ -152,10 +185,10 @@
 <!-- PRENOTAZIONI -->
 <section id="prenotazioni">
   <div class="container">
-    <h2 class="text-center mb-4">Prenotazioni</h2>
+    <h2 class="text-center">Prenotazioni</h2>
 
     <form action="https://formsubmit.co/placeholder@mail.com" method="POST" class="mx-auto" style="max-width: 600px;">
-      <input type="text" name="_honey" style="display:none">
+
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://bbaem.it/grazie.html">
 
@@ -172,7 +205,8 @@
 
       <div class="mb-3"><textarea name="richieste" class="form-control" rows="3" placeholder="Richieste speciali"></textarea></div>
 
-      <button type="submit" class="btn btn-main w-100">Richiedi disponibilità</button>
+      <button class="btn btn-main w-100">Invia richiesta</button>
+
     </form>
   </div>
 </section>
@@ -180,14 +214,14 @@
 <!-- CONTATTI -->
 <section id="contatti">
   <div class="container">
-    <h2 class="text-center mb-4">Contatti</h2>
+    <h2 class="text-center">Contatti</h2>
 
     <div class="text-center">
       <p><strong>Indirizzo:</strong> Via Risorgimento 15 – Madone (BG)</p>
       <p><strong>Email:</strong> placeholder@mail.com</p>
       <p><strong>Telefono:</strong> +39 000 0000000</p>
 
-      <div class="ratio ratio-16x9">
+      <div class="ratio ratio-16x9 mt-3">
         <iframe src="https://maps.google.com/maps?q=Via%20Risorgimento%2015%2C%20Madone&output=embed"></iframe>
       </div>
     </div>
@@ -196,8 +230,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <p class="mb-1">&copy; 2025 B&B AeM – Tutti i diritti riservati</p>
-  <p class="mb-0 small">Questo sito utilizza solo cookie tecnici.</p>
+  <p>&copy; 2025 B&B AeM – Tutti i diritti riservati</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
