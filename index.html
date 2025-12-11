@@ -2,99 +2,140 @@
 <html lang="it">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="B&B AeM - Il tuo soggiorno a Madone (BG)">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>B&B AeM</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
   <style>
+    :root {
+      --main-color: #b30000;
+      --secondary-color: #000000;
+      --background-color: #ffffff;
+    }
+
     body {
-      background-color: #ffffff;
-      color: #000000;
+      background-color: var(--background-color);
+      color: var(--secondary-color);
     }
+
     .navbar {
-      background-color: #ffffff;
+      background-color: var(--background-color);
     }
-    .navbar-brand img {
-      height: 50px;
+
+    .navbar .nav-link,
+    .navbar-brand {
+      color: var(--secondary-color) !important;
     }
-    .carousel-inner img {
-      height: 500px;
-      object-fit: cover;
-      width: 100%;
-    }
+
     .btn-main {
-      background-color: #b30000;
+      background-color: var(--main-color);
       color: white;
     }
-    .btn-main:hover {
-      background-color: #8f0000;
-    }
+
     footer {
-      background-color: #000000;
-      color: #ffffff;
-      padding: 20px 0;
+      background-color: var(--secondary-color);
+      color: white;
       text-align: center;
+      padding: 1rem 0;
+      margin-top: 3rem;
+    }
+
+    .carousel-inner img {
+      height: 400px;
+      object-fit: cover;
     }
   </style>
 </head>
 
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg shadow-sm">
+  <nav class="navbar navbar-expand-lg">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <img src="logo.png" alt="B&B AeM Logo">
+        <img src="logo.png" alt="Logo B&B AeM" height="40">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#camere">Camere</a></li>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#camera">Camera</a></li>
+          <li class="nav-item"><a class="nav-link" href="#prezzi">Prezzi</a></li>
+          <li class="nav-item"><a class="nav-link" href="#prenotazioni">Prenota</a></li>
           <li class="nav-item"><a class="nav-link" href="#contatti">Contatti</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Carosello -->
-  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="camera_1.jpg" class="d-block w-100" alt="Camera 1">
+  <header class="container mt-4">
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="camera_1.jpg" class="d-block w-100" alt="Camera 1" />
+        </div>
+        <div class="carousel-item">
+          <img src="camera_2.jpg" class="d-block w-100" alt="Camera 2" />
+        </div>
+        <div class="carousel-item">
+          <img src="camera_3.jpg" class="d-block w-100" alt="Camera 3" />
+        </div>
+        <div class="carousel-item">
+          <img src="camera_4.jpg" class="d-block w-100" alt="Camera 4" />
+        </div>
+        <div class="carousel-item">
+          <img src="camera_5.jpg" class="d-block w-100" alt="Camera 5" />
+        </div>
       </div>
-      <div class="carousel-item">
-        <img src="camera_2.jpg" class="d-block w-100" alt="Camera 2">
-      </div>
-      <div class="carousel-item">
-        <img src="camera_3.jpg" class="d-block w-100" alt="Camera 3">
-      </div>
-      <div class="carousel-item">
-        <img src="camera_4.jpg" class="d-block w-100" alt="Camera 4">
-      </div>
-      <div class="carousel-item">
-        <img src="camera_5.jpg" class="d-block w-100" alt="Camera 5">
-      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Precedente</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Successiva</span>
-    </button>
-  </div>
+  </header>
 
-  <!-- Footer -->
+  <section id="camera" class="container mt-5">
+    <h2 class="text-center mb-4">La Camera</h2>
+    <p class="lead text-center">Accogliente, luminosa e dotata di tutti i comfort per un soggiorno rilassante a Madone.</p>
+  </section>
+
+  <section id="prezzi" class="container mt-5">
+    <h2 class="text-center mb-4">Prezzi</h2>
+    <p class="text-center fs-4">€80 a notte per 2 persone</p>
+  </section>
+
+  <section id="prenotazioni" class="container mt-5">
+    <h2 class="text-center mb-4">Prenota Ora</h2>
+    <form action="https://formsubmit.co/tuamail@example.com" method="POST" class="mx-auto" style="max-width: 600px">
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="nome" name="nome" required />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email" required />
+      </div>
+      <div class="mb-3">
+        <label for="messaggio" class="form-label">Messaggio</label>
+        <textarea class="form-control" id="messaggio" name="messaggio" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-main">Invia</button>
+    </form>
+  </section>
+
+  <section id="contatti" class="container mt-5 mb-5">
+    <h2 class="text-center mb-4">Contatti</h2>
+    <p class="text-center">📍 Via Risorgimento 15, Madone (BG)</p>
+    <p class="text-center">📧 email@example.com</p>
+    <p class="text-center">📞 +39 123 456789</p>
+  </section>
+
   <footer>
-    <p class="mb-1">&copy; 2025 B&B AeM - Tutti i diritti riservati</p>
-    <p class="mb-0 small">Via Risorgimento 15, Madone (BG)</p>
+    <p class="mb-0">&copy; 2025 B&B AeM - Tutti i diritti riservati</p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
