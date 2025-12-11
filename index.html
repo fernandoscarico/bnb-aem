@@ -23,18 +23,6 @@
       background-color: var(--background-color);
     }
 
-    header {
-      background: var(--main-color);
-      color: white;
-      text-align: center;
-      padding: 40px 0;
-    }
-
-    header img {
-      width: 110px;
-      margin-bottom: 15px;
-    }
-
     .btn-main {
       background: var(--main-color);
       color: white;
@@ -81,7 +69,11 @@
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg" style="background-color: var(--navbar-color);">
   <div class="container">
-    <a class="navbar-brand text-white" href="#">B&B AeM</a>
+
+    <a class="navbar-brand d-flex align-items-center text-white" href="#">
+      <img src="logo.png" alt="B&B AeM Logo" style="height: 45px; width:auto; margin-right:10px;">
+      <span>B&B AeM</span>
+    </a>
 
     <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
@@ -112,17 +104,9 @@
         </li>
       </ul>
     </div>
+
   </div>
 </nav>
-
-<!-- HEADER -->
-<header>
-  <div class="container">
-    <img src="logo.png" alt="Logo B&B AeM">
-    <h1>B&B AeM</h1>
-    <p class="lead">Accoglienza moderna e comfort nel cuore di Madone</p>
-  </div>
-</header>
 
 <!-- CAMERA -->
 <section id="camera">
